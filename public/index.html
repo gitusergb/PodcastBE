@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web server created using express" />
+    <link rel="stylesheet" href="./index.css">
+    <link rel="icon" href="https://i.ibb.co/m53Ssh1/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Ques_AI_BE</title>
+    <style>
+        #outer{
+            height: 650px;
+          background-image: url(https://i.ibb.co/YRRqK5M/istock.jpg);  
+         background-size: cover;
+         border-radius: 10px;
+         background-position: center;
+         display: flex;
+         align-items: center;
+         justify-content:center;
+        }
+        #inner{
+                color: rgb(22, 22, 22);
+                margin: 0px 0px 0px 150px;
+                height: 400px;
+                width: 320px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content:center;
+                border-radius: 10px;
+                background-color: rgba(63, 62, 62, 0.007);
+                backdrop-filter: blur(10px);
+        }
+        nav{
+            display: flex;
+             gap: 30px;
+          
+        }
+
+</style>
+</head>
+<body>
+    <div id="outer">
+        <div id="inner" >
+            <h1>Ques_AI Server Page</h1>
+            <nav>
+                <a href="http://localhost:9000/users/">Users</a>
+                <a href="http://localhost:9000/projects/usersProjects">Projects</a>
+            </nav>
+          
+        </div>
+    </div> 
+</body>
+</html>
