@@ -30,8 +30,8 @@ const PodcastSchema = new mongoose.Schema({
         enum: ['pending', 'completed', 'failed'], 
         default: 'pending' 
     },
-    createdAt: { type: Date, default: Date.now },
-    updatedAt: { type: Date, default: Date.now }
+    createdAt: { type: Date.toLocaleString("en-IN",{}), default: Date.now },
+    updatedAt: { type: Date.toLocaleString("en-IN",{}), default: Date.now }
 });
 
 
