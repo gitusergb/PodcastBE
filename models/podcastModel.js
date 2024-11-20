@@ -30,12 +30,12 @@ const PodcastSchema = new mongoose.Schema({
         enum: ['pending', 'completed', 'failed'], 
         default: 'pending' 
     },
-    createdAt: { type: Date.toLocaleString("en-IN",{}), default: Date.now },
-    updatedAt: { type: Date.toLocaleString("en-IN",{}), default: Date.now }
+    createdAt: { type: Date, default: Date.now },
+    updatedAt: { type: Date, default: Date.now }
 });
 
 
-// Middleware to auto-update the `updatedAt` field on document updates
+
 PodcastSchema.pre('save', function(next) {
 this.updatedAt = Date.now();
 next();
