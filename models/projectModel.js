@@ -6,7 +6,8 @@ const ProjectSchema = new mongoose.Schema({
     userId:{ type:String,ref:'User'},
     username:{type:String,ref:'User'},
     email:{type:String,ref: 'User'},
-    podcasts: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Podcast' }],
+    podcast: [{ type:String , ref: 'Podcast' }],
+    video:[{type:String,ref:'videos'}],
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }
 },{

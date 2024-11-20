@@ -1,6 +1,7 @@
 const express = require('express')
 const dotenv = require('dotenv');
 const cors = require('cors');
+
 const {connectDB} = require('./config/db');
 const auth = require('./middleware/auth');
 
@@ -20,6 +21,7 @@ app.use('/users', userRoutes)
 app.use('/projects', projectRoutes)
 app.use('/podcasts', podcastRoutes)
 
+app.use(cors({ origin: "http://your-frontend-url.com" }));
 app.use(express.static('public'));
 
 app.get('/users/protected-route', auth, (req, res) => {
